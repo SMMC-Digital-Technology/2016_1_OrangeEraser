@@ -9,51 +9,27 @@ var Incomevalue4 = 16000;
 var Incomevalue5 = 0;
 
 function incomeTax(income) {
-    if (inputincome > Incomevalue1){
-        var dif = Income - Incomevalue1;
+    if (inputincome > Incomevalue1) {
+        var dif = inputincome - Incomevalue1;
         var dif1 = dif * 0.36 + 39400;
         tax.innerHTML = dif1;
-    }else if (inputincome > Incomevalue2){
-        var diff = Income - Incomevalue2;
+    } else if (inputincome > Incomevalue2) {
+        var diff = inputincome - Incomevalue2;
         var diff1 = diff * 0.24 + 13330;
         tax.innerHTML = diff1;
-    }else if (inputincome > Incomevalue3){
-        var difff = Income - Incomevalue3;
+    } else if (inputincome > Incomevalue3) {
+        var difff = inputincome - Incomevalue3;
         var difff1 = difff * 0.16 + 3650;
         tax.innerHTML = difff1;
-    }else if (inputincome > Incomevalue4){
-        var dix = Income - Incomevalue4;
+    } else if (inputincome > Incomevalue4) {
+        var dix = inputincome - Incomevalue4;
         var dix1 = dix * 0.10;
         tax.innerHTML = dix1;
-    }else {
-        
+    } else {
+
     }
     return tax;
 }
-    
-    
-    else if (guess > number){
-        var dif = number - guess;
-        if (dif < 30) {
-            statementDisplay.innerHTML = STATEMENT_SMALLER;
-        } else {
-            statementDisplay.innerHTML = STATEMENT_LOWER;
-        }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -64,12 +40,12 @@ function incomeTax(income) {
 
 
 /*
-* This is the guessing game script.
-*/
+ * This is the guessing game script.
+ */
 
 /* This section runs when the script loads, but what it does is 
-* create variables and constants for the game.
-*/
+ * create variables and constants for the game.
+ */
 // the random number for the player to guess
 var number = getRandomInt(0, 100);
 // the input field
@@ -90,9 +66,9 @@ var STATEMENT_CORRECT = "Correct!<br>My number was ";
 var STATEMENT_NEW = "<br><br>Can you guess my new number?";
 
 /* This function runs when a number is entered into the field.
-* It first checks if the guess is small, then larger, otherwise it
-* is correct.
-*/
+ * It first checks if the guess is small, then larger, otherwise it
+ * is correct.
+ */
 function guessMade() {
     var guess = inputGuess.value;
     if (guess < number) {
@@ -102,18 +78,16 @@ function guessMade() {
         } else {
             statementDisplay.innerHTML = STATEMENT_LARGER
         }
-    }
-    else if (guess > number){
+    } else if (guess > number) {
         var dif = number - guess;
         if (dif < 30) {
             statementDisplay.innerHTML = STATEMENT_SMALLER;
         } else {
             statementDisplay.innerHTML = STATEMENT_LOWER;
         }
-    }
-    else{
+    } else {
         statementDisplay.innerHTML = STATEMENT_CORRECT + number + STATEMENT_NEW;
-        number = getRandomInt(0,100);
+        number = getRandomInt(0, 100);
     }
 }
 
