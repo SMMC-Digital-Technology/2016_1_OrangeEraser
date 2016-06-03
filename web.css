@@ -2,18 +2,21 @@ nav {
     background: Gray;
     width: 100%;
 }
+
 nav ul {
     list-style: none;
     text-align: center;
     padding: 0;
     margin: 0;
 }
+
 nav li {
     display: inline-block;
     width: auto;
     padding: 0;
     margin: 5px;
 }
+
 nav a {
     display: inline-block;
     text-align: center;
@@ -25,12 +28,11 @@ nav a {
     border-radius: 10px;
     transition: 0.5s background ease-in-out;
 }
-nav a:hover {
-    background: rgb(240,240,240);
-}
 
+nav a:hover {
+    background: rgb(240, 240, 240);
+}
 
 h1 {
     text-align: center;
 }
-

@@ -1,137 +1,137 @@
 <!DOCTYPE html>
 <html lang=en>
+
     <head>
-      
+
         <meta charset="utf-8">
         <title> Goverment of Zabututi</title>
         <link href="web.css" rel="stylesheet">
     </head>
 
-    
-    <body> 
-     <header>
-        <h1> Zabututi Goverment <br/>
+
+    <body>
+        <header>
+            <h1> Zabututi Goverment <br/>
             Zabututi Tax Department
-</h1>
-            
-         
-         
-.
-<nav>
-    <!-- Navigation Bar -->
-    <ul>
-        <li><a href="page1.html">Home</a></li>
-        <li><a href="page2.html">Business</a></li>
-        <li><a href="page3.html">Not-for-profit</a></li>
-        <li><a href="page4.html">Super</a></li>
-        <li><a href="page5.html">Tax Professionals</a></li>
-        <li><a href="page6.html">Feedback and About us</a></li>
-    </ul>
-</nav>
-         
-         
-         
-         <table width="80%" border="10" cellpadding="3" cellspacing="5" align="center">
-<caption>
-<center><b></b></center>
-<br>
-Income Range 
-</caption>
-<tr>
-<th colspan="5"> <b></b>Tax Range</th>
-</tr>
-<tr>
-<td width="20%"> <b></b> $0 - $16,000</td>
-<td width="20%"> <b></b>$16,000 - $52,500</td> 
-<td width="20%"> <b></b>$52,500 - $$113,000</td>   
-<td width="20%"> <b></b> $113,000 - $184,500</td> 
-<td width="20%">More than $184,500</td>    
-<tr>
-<th colspan="5"> <b></b>Tax Payed</th>    
-             </tr>
-   
-            
-<tr>
-<td width="20%">$0</td>
-<td width="20%">10% of every dollar over $16000</td>
-<td width="20%">  	
-
-$3650 plus 16% of every dollar over $52500
-</td>
-<td width="20%"> 	
- 	
-
-$13330 plus 24% of every dollar over $113000
-</td>
-<td width="20%">  	
-
-$30490 plus 36% of every dollar over $184500 	
-
-    </td>
-</tr>
-
-</table>
-         
-<br/>
- <br/>
-         <br/>
-         <br/>
-       
-         
-         
-<table width="80%" border="10" cellpadding="3" cellspacing="5" align="center">
-       
-<tr>
-<td width="50%"> <b></b>
-    <p>
-Payees Income:<br>
-Calculates Tax
-</p>
-
-<form action="action_page.php">
-  Income :
-  <input type="number" id="inputincome" min="0">
-  <input type="submit">
-</form>
-    
-    
-    </td>   
-<td width="50%"> <b></b> 
-    
-    
-
-    
-    
-  <table width="80%" border="10" cellpadding="3" cellspacing="5" align="center">
-      <tr>
-        <td>Payee's Name (optional)</td>
-          <td>Payee's Tax File Number</td>       
-      
-      </tr>
-      
-      <tr>
-        <td>
-          <input type="text" name="submit" name="text3" size="30"> 
-          </td>  
-          <td>
-                    
-          <input type="text" name="submit" name="text3" size="30"> 
-
-          </td>
-
-      </tr>
- </table>
+</h1> .
+            <nav>
+                <!-- Navigation Bar -->
+                <ul>
+                    <li><a href="page1.html">Home</a></li>
+                    <li><a href="page2.html">Business</a></li>
+                    <li><a href="page3.html">Not-for-profit</a></li>
+                    <li><a href="page4.html">Super</a></li>
+                    <li><a href="page5.html">Tax Professionals</a></li>
+                    <li><a href="page6.html">Feedback and About us</a></li>
+                </ul>
+            </nav>
+        </header>
 
 
 
-    </td>
-    </tr>
-    
-  
-</table>
-   
-   
-    
-         
+        <table width="80%" border="10" cellpadding="3" cellspacing="5" align="center">
+            <caption>
+                <center><b></b></center>
+                <br> Income Range
+            </caption>
+            <tr>
+                <th colspan="5"> <b></b>Tax Range</th>
+            </tr>
+            <tr>
+                <td width="20%"> <b></b> $0 - $16,000</td>
+                <td width="20%"> <b></b>$16,000 - $52,500</td>
+                <td width="20%"> <b></b>$52,500 - $$113,000</td>
+                <td width="20%"> <b></b> $113,000 - $184,500</td>
+                <td width="20%">More than $184,500</td>
+                <tr>
+                    <th colspan="5"> <b></b>Tax Payed</th>
+                </tr>
 
-         
+
+                <tr>
+                    <td width="20%">$0</td>
+                    <td width="20%">10% of every dollar over $16000</td>
+                    <td width="20%">
+
+                        $3650 plus 16% of every dollar over $52500
+                    </td>
+                    <td width="20%">
+
+
+                        $13330 plus 24% of every dollar over $113000
+                    </td>
+                    <td width="20%">
+
+                        $30490 plus 36% of every dollar over $184500
+
+                    </td>
+                </tr>
+
+        </table>
+
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+
+        <div id="myDiv" style="width: 100%; height: 600px;" align="center">
+            <!-- Plotly chart will be drawn inside this DIV -->
+        </div>
+
+        <table width="80%" border="10" cellpadding="3" cellspacing="5" align="center">
+
+            <tr>
+                <td width="50%"> <b></b>
+                    <p>
+                        Payees Income:
+                        <br> Calculates Tax
+                    </p>
+
+                    <fieldset>
+                        Income :
+                        <input type="number" id="inputincome" min="0" oninput="incomeEntered()"> Tax:
+                        <output id="display"></output>
+                    </fieldset>
+
+
+                </td>
+                <td width="50%"> <b></b>
+
+
+
+
+
+                    <table width="80%" border="10" cellpadding="3" cellspacing="5" align="center">
+                        <tr>
+                            <td>Payee's Name (optional)</td>
+                            <td>Payee's Tax File Number</td>
+
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <input type="text" name="submit" name="text3" size="30">
+                            </td>
+                            <td>
+
+                                <input type="text" name="submit" name="text3" size="30">
+
+                            </td>
+
+                        </tr>
+                    </table>
+
+
+
+                </td>
+            </tr>
+
+
+        </table>
+
+        <script src="plotly.js"></script>
+        <script src="Zabututi.js"></script>
+
+    </body>
+
+</html>
